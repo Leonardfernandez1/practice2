@@ -16,16 +16,11 @@ jobs:
       - name: Instalar Dependencias
         run: npm ci
 
-  lintjob:
-    needs: dependenciasjob
-    runs-on: ubuntu-latest
-    
-    steps: 
       - name: lint
         run: npm run lint
 
   testjob:
-    needs: lintjob
+    needs: dependenciasjob
     runs-on: ubuntu-latest
 
     steps:
