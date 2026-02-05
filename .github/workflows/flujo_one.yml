@@ -1,0 +1,26 @@
+name: Flujo uno
+on: workflow_dispatch
+jobs:
+  contruir:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Instalar Dependencias
+        run: npm ci
+
+      - name: lint
+        run: npm run lint
+
+      - name: test
+        run: nom tests
+
+      - name: build
+        run: npm run build
+
+  desplegar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Despliegue
+        run: echo "Se ha realizado el despliegue"
+ 
+    
