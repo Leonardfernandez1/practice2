@@ -5,7 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Instalar NPM
+      - name: Obtener código
+        uses: actions/checkout@v4
+
+      - name: Instalar NodeJS
         uses: actions/setup-node@v4
         with: 
           node-version: 20 
