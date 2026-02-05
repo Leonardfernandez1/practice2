@@ -1,9 +1,14 @@
 name: Flujo uno
 on: workflow_dispatch
 jobs:
-  contruir:
+  construir:
     runs-on: ubuntu-latest
     steps:
+
+      - name: Instalar NPM
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 20 
 
       - name: Instalar Dependencias
         run: npm ci
